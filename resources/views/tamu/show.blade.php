@@ -26,7 +26,7 @@
 		</div>
 		<div class="card-body">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-6">
 					<div class="card-text mb-3">
 						<h4 class="mb-0">Nama Tamu :</h4>
 						{{ $data->name }}
@@ -48,7 +48,7 @@
 						{{ date('d M Y - H:i', strtotime($data->created_at)) }}
 					</div>
 				</div>
-				<div class="col-md-4 text-center">
+				<div class="col-md-6 text-center">
 					<img src="{{ Storage::url($data->photo) }}" class="rounded">
 				</div>
 			</div>

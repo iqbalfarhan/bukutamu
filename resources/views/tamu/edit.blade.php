@@ -45,16 +45,16 @@
 						</div>
 
 						<div class="row">
-							<div class="col text-center">
+							<div class="col-md-8 text-center">
 								<div id="my_camera" class="w-100 mb-3"></div>
 								<button class="btn btn-secondary btn-sm" type="button" onclick="take_snapshot()"><i class="fa fa-camera mr-2"></i>span photo</button>
 							</div>
 
-							<div class="col">
+							<div class="col-md-4">
 								<div class="form-group">
-									<label class="form-control-label" for="photo">Hasil Photo</label>
+									<label class="form-control-label" for="photo">photo lama</label>
 									<input type="hidden" name="snapphoto" id="snapphoto">
-									<div id="prevBefUpload"><img src="{{ Storage::url($data->photo) }}"></div>
+									<div id="prevBefUpload"><img src="{{ Storage::url($data->photo) }}" class="w-100"></div>
 								</div>
 							</div>
 						</div>
@@ -85,7 +85,7 @@
 
 	function take_snapshot() {
 		Webcam.snap( function(data_uri) {
-			$('#prevBefUpload').html('<img class="rounded mb-3" src="'+data_uri+'"/>');
+			$('#prevBefUpload').html('<img class="rounded mb-3 w-100" src="'+data_uri+'"/>');
 			$("#snapphoto").val(data_uri);
 		});
 	}

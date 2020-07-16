@@ -47,7 +47,7 @@ $no =1;
 								<td>{{ $no++ }}</td>
 								<td class="p-2 text-center">
 									<a href="{{ route('tamu.show', $data) }}" class="avatar rounded mr-3">
-										<img src="{{ Storage::url($data->photo) }}" class="h-100">
+										<img src="{{ Storage::url($data->photo) }}">
 									</a>
 								</td>
 								<td>{{ date('H:i:s', strtotime($data->created_at)) }}</td>
