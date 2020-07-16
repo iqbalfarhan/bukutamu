@@ -50,7 +50,7 @@ $no =1;
 										<img src="{{ Storage::url($data->photo) }}" class="h-100">
 									</a>
 								</td>
-								<td>{{ date('H:i', strtotime($data->created_at)) }}</td>
+								<td>{{ date('H:i:s', strtotime($data->created_at)) }}</td>
 								<td><b>{{ $data->name }}</b><br>{{ $data->phone }}</td>
 								<td>{{ $data->meet_who }}</td>
 								<td>{{ substr($data->purpose, 0, 30) }}</td>

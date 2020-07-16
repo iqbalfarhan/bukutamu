@@ -76,17 +76,16 @@
 <script src="{{ asset('argon/vendor/webcamjs/webcam.js') }}"></script>
 <script>
 	Webcam.set({
-		width: 320,
-		height: 240,
+		width: 480,
+		height: 360,
 		image_format: 'jpeg',
-		jpeg_quality: 100,
-		class: 'w-100'
+		jpeg_quality: 100
 	});
 	Webcam.attach('#my_camera');
 
 	function take_snapshot() {
 		Webcam.snap( function(data_uri) {
-			$('#prevBefUpload').html('<img class="rounded mb-3" src="'+data_uri+'"/>');
+			$('#prevBefUpload').html('<img class="rounded mb-3 w-100" src="'+data_uri+'"/>');
 			$("#snapphoto").val(data_uri);
 		});
 	}
