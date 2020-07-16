@@ -26,7 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $datas = [
-            'today' => Tamu::where('created_at', now()),
+            'today' => Tamu::whereDate('created_at', date('Y-m-d')),
             'thisMonth' => Tamu::whereMonth('created_at', date('m'))
         ];
         return view('dashboard', $datas);
