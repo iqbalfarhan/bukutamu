@@ -76,11 +76,10 @@
 <script src="{{ asset('argon/vendor/webcamjs/webcam.js') }}"></script>
 <script>
 	Webcam.set({
-		width: 320,
-		height: 240,
+		width: 480,
+		height: 360,
 		image_format: 'jpeg',
-		jpeg_quality: 100,
-		class: 'w-100'
+		jpeg_quality: 100
 	});
 	Webcam.attach('#my_camera');
 
