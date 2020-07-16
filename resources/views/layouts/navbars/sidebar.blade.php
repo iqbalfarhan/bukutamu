@@ -26,7 +26,7 @@
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="{{ route('tamu.index') }}">
-							<i class="ni ni-circle-08 text-success"></i>
+							<i class="ni ni-circle-08 text-primary"></i>
 							<span class="nav-link-text">{{ __('Daftar tamu') }}</span>
 						</a>
 					</li>
