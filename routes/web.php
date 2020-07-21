@@ -29,5 +29,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 
 	Route::get('tamu/getall', 'TamuController@getall')->name('tamu.getall');
+	Route::put('tamu/{tamu}/keluar', 'TamuController@keluar')->name('tamu.keluar');
 	Route::resource('tamu', 'TamuController');
 });

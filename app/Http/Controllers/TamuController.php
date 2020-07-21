@@ -72,6 +72,7 @@ class TamuController extends Controller
             'meet_who' => $request->meet_who ?? "-",
             'purpose' => $request->purpose,
             'photo' => $upload ?? "",
+            'masuk' => now()
         ];
         Tamu::create($datainsert);
         return redirect()->route('tamu.index');
@@ -155,5 +156,11 @@ class TamuController extends Controller
         Storage::delete($tamu->photo);
         Tamu::find($tamu->id)->delete();
         return back();
+    }
+
+    public function keluar(Request $request, Tamu $tamu)
+    {
+        Tamu::find($tamu->id)->update($request->all());
+        return redirect()->route('tamu.index');
     }
 }

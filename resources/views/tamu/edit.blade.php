@@ -66,6 +66,23 @@
 				</form>
 			</div>
 		</div>
+		<div class="col-md-4">
+			<div class="card bg-secondary">
+				<form action="{{ route('tamu.keluar', $data) }}" method="POST">
+					@csrf
+					@method('PUT')
+					<div class="card-body">
+						<div class="form-group mb-0">
+							<label class="form-control-label" for="keluar">Jam Keluar (<em class="small text-muted">Terisi otomatis</em>)</label>
+							<input type="time" class="form-control" id="keluar" name="keluar" placeholder="max 100 characters" value="{{ date("H:i") }}">
+						</div>
+					</div>
+					<div class="card-footer">
+						<button class="btn btn-primary"><i class="fa fa-timer mr-2"></i>Simpan</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 
 	@include('layouts.footers.auth')

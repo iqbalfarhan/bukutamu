@@ -11,6 +11,8 @@ class Tamu extends Model
 		'phone',
 		'meet_who',
 		'purpose',
+		'masuk',
+		'keluar',
 		'photo',
 	];
 }

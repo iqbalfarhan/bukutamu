@@ -34,9 +34,9 @@ $no =1;
 					<table class="table table-sm">
 						<thead class="table-light">
 							<th>No</th>
-							<th>Photo</th>
-							<th>Waktu</th>
-							<th>Nama Tamu</th>
+							<th>Detail tamu</th>
+							<th>Masuk</th>
+							<th>Keluar</th>
 							<th>Ingin Bertemu</th>
 							<th>Tujuan</th>
 							<th class="text-center">Action</th>
@@ -45,13 +45,18 @@ $no =1;
 							@foreach ($datas as $data)
 							<tr>
 								<td>{{ $no++ }}</td>
-								<td class="p-2 text-center">
-									<a href="{{ route('tamu.show', $data) }}" class="avatar rounded mr-3">
-										<img src="{{ Storage::url($data->photo) }}">
-									</a>
+								<td class="p-2">
+									<div class="media">
+										<a href="{{ route('tamu.show', $data) }}" class="avatar rounded-circle mr-2">
+											<img src="{{ Storage::url($data->photo) }}">
+										</a>
+										<div class="media-body">
+											<b>{{ $data->name }}</b><br>{{ $data->phone }}
+										</div>
+									</div>
 								</td>
-								<td>{{ date('H:i:s', strtotime($data->created_at)) }}</td>
-								<td><b>{{ $data->name }}</b><br>{{ $data->phone }}</td>
+								<td>{{ $data->masuk }}</td>
+								<td>{{ $data->keluar }}</td>
 								<td>{{ $data->meet_who }}</td>
 								<td>{{ substr($data->purpose, 0, 30) }}</td>
 								<td class="p-2 text-center">
