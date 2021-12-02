@@ -20,7 +20,7 @@ class CreateTamusTable extends Migration
             $table->string('meet_who')->nullable();
             $table->string('purpose');
             $table->string('photo');
-            $table->time('masuk');
+            $table->time('masuk')->nullable();
             $table->time('keluar')->nullable();
             $table->timestamps();
         });
