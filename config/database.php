@@ -48,7 +48,7 @@ return [
             'url' => getenv('uri'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => getenv('database_name', 'forge'),
+            'database' => getenv('database_name', 'bukutamu'),
             'username' => getenv('username', 'forge'),
             'password' => getenv('password', ''),
             'unix_socket' => env('DB_SOCKET', ''),
