@@ -21,6 +21,6 @@ class UsersTableSeeder extends Seeder
             'updated_at' => now()
         ]);
 
-        factory('App\Tamu', 10)->create();
+//         factory('App\Tamu', 10)->create();
     }
 }
