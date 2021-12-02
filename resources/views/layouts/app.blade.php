@@ -9,16 +9,16 @@
 
     <title>{{ config('app.name', 'Argon Dashboard') }}</title>
     <!-- Favicon -->
-    <link href="{{ asset('argon') }}/img/brand/favicon.png" rel="icon" type="image/png">
+    <link href="{{ url('argon') }}/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Icons -->
-    <link href="{{ asset('argon') }}/vendor/nucleo/css/nucleo.css" rel="stylesheet">
-    <link href="{{ asset('argon') }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="{{ url('argon') }}/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+    <link href="{{ url('argon') }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 
     @stack('css')
     <!-- Argon CSS -->
-    <link type="text/css" href="{{ asset('argon') }}/css/argon.css?v=1.0.0" rel="stylesheet">
+    <link type="text/css" href="{{ url('argon') }}/css/argon.css?v=1.0.0" rel="stylesheet">
 </head>
 <body class="{{ $class ?? '' }}">
     @auth()
@@ -39,16 +39,16 @@
 
     @stack('modal')
 
-    <script src="{{ asset('argon') }}/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="{{ asset('argon') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('argon') }}/vendor/js-cookie/js.cookie.js"></script>
-    <script src="{{ asset('argon') }}/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-    <script src="{{ asset('argon') }}/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+    <script src="{{ url('argon') }}/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="{{ url('argon') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url('argon') }}/vendor/js-cookie/js.cookie.js"></script>
+    <script src="{{ url('argon') }}/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="{{ url('argon') }}/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
 
     @stack('js')
 
     <!-- Argon JS -->
-    <script src="{{ asset('argon') }}/js/argon.js?v=1.0.0"></script>
+    <script src="{{ url('argon') }}/js/argon.js?v=1.0.0"></script>
     <script>
         $(document).ready(function(){
             $("#search").on("keyup", function() {
